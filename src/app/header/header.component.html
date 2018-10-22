@@ -1,0 +1,11 @@
+<div class="ui grid p-2">
+  <div class="three wide row">
+    <!-- visible as default upload entry point -->
+    <button class="large ui button green left aligned" *ngIf="!uploadingFiles">
+      <i class="arrow up icon"></i>Upload
+      <input type="file" multiple (change)="selectFiles($event)" class="large ui button green left aligned" />
+    </button>
+    <!-- visible only when an upload is going on -->
+    <button class="large ui button green left aligned loading" *ngIf="uploadingFiles"><i class="arrow up icon"></i>Upload</button>
+  </div>
+</div>

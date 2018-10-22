@@ -1,0 +1,24 @@
+<div class="item">
+  <div class="ui raised segment">    
+    <div class="ui grid">
+      <div class="row">
+        <div class="thirteen wide column">
+          <div class="row">
+            <span class="file-title">{{ DisplayName }}</span>
+            <span class="download-status" *ngIf="TotalUploadedPercentage > 0">{{ TotalUploadedSize}} of {{ FileSize }}</span> 
+            <!-- <small class="download-speed">(345 kb/sec)</small> -->
+            <small class="starting" *ngIf="TotalUploadedPercentage <= 0">Starting upload ...</small>
+            <sui-progress class="top attached indicating" *ngIf="TotalUploadedPercentage > 0" [value]="TotalUploadedPercentage"></sui-progress>
+
+          </div>
+        </div>
+        <div class="three wide column right aligned">          
+            <div class="ui grey horizontal label" *ngIf="UploadStatus == 0">NA</div>
+            <div class="ui red horizontal label" *ngIf="UploadStatus == 1">Failed</div>
+            <div class="ui green horizontal label" *ngIf="UploadStatus == 2">Complete</div>
+            <div class="ui orange horizontal label" *ngIf="UploadStatus == 3">Progress</div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+input[type=file] {
+    color: transparent;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    opacity: 0;
+    z-index: 100;
+}

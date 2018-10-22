@@ -1,0 +1,16 @@
+.search { width: 50%;}
+.search i.search {left: 0 !important;}
+.search input[type=text] { width: 70%;margin: 0 0 0 10% !important;border: none !important; height: 46px;}
+
+.main.menu span.icon .icon, 
+.inline-row-menu .icon { 
+    cursor: pointer !important;
+    font-size: 1.10pc;
+}
+
+tr.ui.segment {
+    background-color: #efecec !important;    
+}
+
+td.collapsing { padding: 1% 1% 1% 1% !important;}
+th.collapsing { padding: 0  1% 1% 1% !important;}

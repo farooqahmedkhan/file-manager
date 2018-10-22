@@ -1,0 +1,1 @@
+export const FileSizeHelper = require('file-size');

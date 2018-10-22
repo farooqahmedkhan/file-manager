@@ -1,0 +1,26 @@
+.item {
+    margin: 0px 0px 1% 0px;
+}
+
+.file-title {
+    display:block;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.download-status {
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+}
+
+.download-speed {
+    color: lightgrey;
+    font-size: 10px;
+    display: inline;
+    font-weight: bold;
+    padding-left: 3%;
+}
+
+.label { padding: 5px !important;}

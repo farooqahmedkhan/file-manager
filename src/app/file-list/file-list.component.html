@@ -1,0 +1,39 @@
+<div class="ui container mt-5">
+  <!-- {{ BreadCrumbs }}     -->
+  <div class="row">    
+    <div class="ui right floated main menu" *ngIf="SelectedFiles.length > 0">            
+      <span class="bug popup icon item" suiPopup popupText="Click to delete selected files" (click)="RemoveFileListItem($event)"><i class="trash icon"></i></span>
+    </div>
+    <div class="ui left aligned search">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search files here..." (keyup)="search($event)" [(ngModel)]="searchString">
+        <i class="search icon"></i>
+      </div>      
+    </div>
+  </div>
+  <div class="row">
+    <table class="ui very basic unstackable table selectable p-1">
+      <thead>
+        <tr>
+          <th class="collapsing">
+            <div class="ui checkbox">
+              <sui-checkbox [(ngModel)]="checkUncheckAllFiles" (click)="checkAllFiles($event)" [disabled]="fileList.length == 0"></sui-checkbox>
+            </div>
+          </th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Size</th>          
+        </tr>
+      </thead>
+      <tbody>        
+        <tr *ngFor="let file of fileList; let i = index;" [ngClass] ="{ 'ui segment': file.checked}" (click)="file.checked=(!file.checked)" (dblclick)="openFolder($event, file)">
+          <td class="collapsing"><i class="fiv-sqo fiv-icon-{{ getIconName(file.type) }}"></i></td>
+          <td>{{ file.name }}</td>
+          <td>{{ file.last_modified | amDateFormat:'LL' }}</td>
+          <td>{{ file.size }}</td>          
+        </tr>
+      </tbody>
+    </table>    
+    <div class="ui active centered inline loader" *ngIf="isLoadingFileList"></div>      
+  </div>
+</div>

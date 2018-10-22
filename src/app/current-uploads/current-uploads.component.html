@@ -1,0 +1,25 @@
+<sui-accordion class="styled fluid current-uploads-container" *ngIf="files.length > 0">
+  <sui-accordion-panel [(isOpen)]="panelOpen" [isDisabled]="true">
+    <div title>
+      <h4 class="ui top attached block header">
+        <div class="ui grid">
+          <div class="row">
+            <div class="left floated left aligned twelve wide column">
+              <i class="icon cloud upload"></i>
+              Current Uploads
+            </div>
+            <div class="right floated right aligned four wide column">
+              <i class="icon window minimize" *ngIf="panelOpen" (click)="panelOpen = !panelOpen"></i>
+              <i class="icon window maximize" *ngIf="!panelOpen" (click)="panelOpen = !panelOpen"></i>
+            </div>
+          </div>
+        </div>
+      </h4>
+    </div>
+    <div content>      
+      <div class="ui middle aligned divided list">
+        <app-current-upload-item *ngFor="let file of files;let i=index" (outbound-listener)="listenCurrentUploadItemComponent($event)" [file-data]="file"></app-current-upload-item>
+      </div>
+    </div>
+  </sui-accordion-panel>
+</sui-accordion>
