@@ -28,6 +28,10 @@ export const CONSTANTS = {
         'video/webm': 'webm',
         'video/ogg': 'ogg',
         'video/mp4': 'mp4',
-        'video/mpeg': 'mpeg'        
+        'video/mpeg': 'mpeg',
+        'text/plain': 'txt',
+        'image/webp': 'webp',
+        'psd': 'psd',
+        'application/x-zip-compressed': 'zip'
     }
 }

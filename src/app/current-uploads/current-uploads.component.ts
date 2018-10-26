@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { Utility } from '../Helpers/utility';
 
 @Component({
   selector: 'app-current-uploads',
@@ -22,12 +23,7 @@ export class CurrentUploadsComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void { 
     // * - receive selected files       
     if(!changes.inBoundListener.firstChange){ 
-      let index = 0;
-      let length = (changes.inBoundListener.currentValue as FileList).length;
-      while(index < length){
-        this.files.push((changes.inBoundListener.currentValue as FileList).item(index));
-        index++;
-      }
+      this.files = (changes.inBoundListener.currentValue as File[]);
       this.panelOpen = (this.files.length > 0);
     } 
   }

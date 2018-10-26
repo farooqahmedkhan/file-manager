@@ -4,8 +4,26 @@ input[type=file] {
     position: absolute;
     left: 0;
     width: inherit;
-    height: inherit;
+    height: 350px;
     top: 0;
     opacity: 0;
     z-index: 100;
+}
+
+div.dropzone {
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./../../assets/images/drop-background.png');
+}
+
+
+.over {     
+    z-index: 9999;
+    opacity: 0.2;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    border: 2px dashed darkgray;
 }

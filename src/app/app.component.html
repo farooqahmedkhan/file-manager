@@ -1,5 +1,5 @@
-<div class="ui container dropzone">
-  <app-header (outbound-listener)="listenHeaderComponent($event)" [inbound-listener]="headerComponentData"></app-header>
+<div class="ui container">
+  <app-header (outbound-listener)="listenHeaderComponent($event)" [inbound-listener]="headerComponentData"></app-header>  
   <app-file-list></app-file-list>
   <app-current-uploads (outbound-listener)="listenCurrentUploadsComponent($event)" [inbound-listener]="currentUploadsComponentData"></app-current-uploads>
 </div>

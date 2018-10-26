@@ -38,6 +38,7 @@ export class FileListComponent implements OnInit {
           this.fileList = this._fileListBKP
         break;
       default:
+        console.log(event)
         event.preventDefault();
         return false;
     }

@@ -16,6 +16,7 @@ import { FileRowComponent } from './file-row/file-row.component';
 import { CurrentUploadItemComponent } from './current-upload-item/current-upload-item.component';
 import { environment } from '../environments/environment.prod';
 import { FirebaseService } from './services/firebase.service';
+import { DropzoneDirective } from './dropzone.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FirebaseService } from './services/firebase.service';
     FileListComponent,
     CurrentUploadsComponent,
     FileRowComponent,
-    CurrentUploadItemComponent
+    CurrentUploadItemComponent,
+    DropzoneDirective
   ],
   imports: [
     BrowserModule,

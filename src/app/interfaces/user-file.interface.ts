@@ -22,7 +22,7 @@ export class FSObject {
                 uuid: UUID.UUID(),
                 name: file.name,
                 type: (file.type || file.name.split('.').pop()),
-                last_modified: file.lastModified,
+                last_modified: Date.now.toString() || file.lastModified,
                 root_reference: ""
             });
         }       
