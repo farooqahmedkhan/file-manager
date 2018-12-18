@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
-import { AngularFireList } from '@angular/fire/database';
-import { Observable } from 'rxjs';
 import { FSObject } from '../interfaces/user-file.interface';
 import { IconHelper } from '../Helpers/icons';
-import { Router, ActivatedRoute } from '@angular/router';
-import { CONSTANTS } from '../interfaces/constants';
-import { PARAMETERS } from '@angular/core/src/util/decorators';
 
 @Component({
   selector: 'app-file-list',

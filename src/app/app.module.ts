@@ -17,6 +17,9 @@ import { CurrentUploadItemComponent } from './current-upload-item/current-upload
 import { environment } from '../environments/environment.prod';
 import { FirebaseService } from './services/firebase.service';
 import { DropzoneDirective } from './dropzone.directive';
+import { AppRouterModule } from './modules/app-router/app-router.module';
+import { PagesModule } from './modules/pages/pages.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { DropzoneDirective } from './dropzone.directive';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     MomentModule,
-    FormsModule    
+    FormsModule,
+    RouterModule,
+    AppRouterModule,
+    PagesModule
   ],
   providers: [
     FirebaseService
